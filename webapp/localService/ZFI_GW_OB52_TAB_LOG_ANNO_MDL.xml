@@ -1,0 +1,54 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='D4SCLNT151')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='D4SCLNT151')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='D4SCLNT151')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zfi_gw_ob52_tab_log_srv/$metadata"><edmx:Include Namespace="ZFI_GW_OB52_TAB_LOG_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zfi_gw_ob52_tab_log_anno_mdl.v1">
+			<Annotations Target="ZFI_GW_OB52_TAB_LOG_SRV.zfi_ob52_change_logsType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="logdate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="username"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name_textc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="logtime"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tcode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="progname"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="optype"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="recordType"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="variant"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="accountType"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="toAccount"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fromAccount"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="FromFiscalYear1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="FromPeriod1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ToFiscalYear1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ToPeriod1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="FromFiscalYear2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="FromPeriod2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ToFiscalYear2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ToPeriod2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="AuthorizationGroup"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="FromFiscalYear3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="FromPeriod3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ToFiscalYear3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ToPeriod3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="dataln"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="logdata"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>logdate</PropertyPath>
+						<PropertyPath>logtime</PropertyPath>
+						<PropertyPath>username</PropertyPath>
+						<PropertyPath>name_textc</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

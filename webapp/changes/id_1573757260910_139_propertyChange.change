@@ -1,0 +1,43 @@
+{
+	"fileName": "id_1573757260910_139_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "com.autodesk.zfi_ob52_tb_log.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "visible",
+		"newValue": false
+	},
+	"selector": {
+		"id": "com.autodesk.zfi_ob52_tb_log::sap.suite.ui.generic.template.ListReport.view.ListReport::zfi_ob52_change_logs--listReport-btnPersonalisation",
+		"type": "sap.m.OverflowToolbarButton",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/com.autodesk.zfi_ob52_tb_log/changes/",
+	"projectId": "com.autodesk.zfi_ob52_tb_log",
+	"creation": "2019-11-14T18:56:26.623Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.71.3",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "1.0.0",
+		"from": "1.0.0",
+		"to": "1.0.0"
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

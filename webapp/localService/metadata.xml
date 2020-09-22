@@ -1,0 +1,55 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='D4SCLNT151')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='D4SCLNT151')/$value"><edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/></edmx:Reference>
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='D4SCLNT151')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZFI_GW_OB52_TAB_LOG_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="zfi_ob52_change_logsType" sap:label="Change logs for OB52" sap:content-version="1">
+				<Key><PropertyRef Name="logdate"/><PropertyRef Name="logtime"/></Key><Property Name="logdate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:filter-restriction="interval"
+					sap:required-in-filter="true" sap:label="Date" sap:quickinfo="(8-character) Date for SYST"/><Property Name="logtime" Type="Edm.Time" Nullable="false" Precision="0" sap:filter-restriction="interval" sap:label="Time"
+					sap:quickinfo="TIME Data Element for SYST"/><Property Name="username" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:filter-restriction="single-value"
+					sap:label="User" sap:quickinfo="User Name in User Master Record"/><Property Name="name_textc" Type="Edm.String" MaxLength="80" sap:filter-restriction="single-value" sap:label="Full Name"
+					sap:quickinfo="Full Name of Person"/><Property Name="tcode" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="TCode" sap:quickinfo="Transaction Code"/><Property Name="progname" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Program"
+					sap:quickinfo="ABAP Program Name"/><Property Name="optype" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Type"/><Property Name="recordType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Record Type"/><Property Name="variant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Variant"/><Property Name="accountType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Account Type"/><Property Name="toAccount" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="To Account"/><Property Name="fromAccount" Type="Edm.String" MaxLength="20" sap:label="From Account"/><Property Name="FromFiscalYear1" Type="Edm.String" MaxLength="20" sap:label="From Fiscal Year 1"/><Property Name="FromPeriod1" Type="Edm.String" MaxLength="20" sap:label="From Period 1"/><Property Name="ToFiscalYear1" Type="Edm.String" MaxLength="20" sap:label="To Fiscal Year 1"/><Property Name="ToPeriod1" Type="Edm.String" MaxLength="20" sap:label="To Period 1"/><Property Name="FromFiscalYear2" Type="Edm.String" MaxLength="20" sap:label="From Fiscal Year 2"/><Property Name="FromPeriod2" Type="Edm.String" MaxLength="20" sap:label="From Period 2"/><Property Name="ToFiscalYear2" Type="Edm.String" MaxLength="20" sap:label="To Fiscal Year 2"/><Property Name="ToPeriod2" Type="Edm.String" MaxLength="20" sap:label="To Period 2"/><Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="20" sap:label="Authorization Group"/><Property Name="FromFiscalYear3" Type="Edm.String" MaxLength="20" sap:label="From Fiscal Year 3"/><Property Name="FromPeriod3" Type="Edm.String" MaxLength="20" sap:label="From Period 3"/><Property Name="ToFiscalYear3" Type="Edm.String" MaxLength="20" sap:label="To Fiscal Year 3"/><Property Name="ToPeriod3" Type="Edm.String" MaxLength="20" sap:label="To Period 3"/><Property Name="dataln" Type="Edm.Int16" sap:label="" sap:quickinfo="Actual length of vardata"/><Property Name="logdata" Type="Edm.Binary" sap:label="" sap:quickinfo="Modified Data Record"/></EntityType>
+			<EntityContainer Name="ZFI_GW_OB52_TAB_LOG_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="zfi_ob52_change_logs" EntityType="ZFI_GW_OB52_TAB_LOG_SRV.zfi_ob52_change_logsType" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/></EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="ZFI_GW_OB52_TAB_LOG_SRV.ZFI_GW_OB52_TAB_LOG_SRV_Entities/zfi_ob52_change_logs">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record><PropertyValue Property="RequiresFilter" Bool="true"/>
+						<PropertyValue Property="RequiredProperties">
+							<Collection>
+								<PropertyPath>logdate</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record><PropertyValue Property="Property" PropertyPath="logdate"/><PropertyValue Property="AllowedExpressions" String="SingleRange"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="logtime"/><PropertyValue Property="AllowedExpressions" String="SingleRange"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="username"/><PropertyValue Property="AllowedExpressions" String="SingleValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="name_textc"/><PropertyValue Property="AllowedExpressions" String="SingleValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="fromAccount"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="FromFiscalYear1"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="FromPeriod1"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ToFiscalYear1"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ToPeriod1"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="FromFiscalYear2"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="FromPeriod2"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ToFiscalYear2"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ToPeriod2"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="AuthorizationGroup"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="FromFiscalYear3"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="FromPeriod3"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ToFiscalYear3"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ToPeriod3"/><PropertyValue Property="AllowedExpressions" String="SearchExpression"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZFI_GW_OB52_TAB_LOG_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZFI_GW_OB52_TAB_LOG_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
